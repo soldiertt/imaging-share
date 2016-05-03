@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>My personal (imaging)</shortname>
+	<description>Dashlet to display my personal</description>
+	<family>dashlet</family>
+	<url>/imaging/dashlet/mypersonal</url>
+</webscript>

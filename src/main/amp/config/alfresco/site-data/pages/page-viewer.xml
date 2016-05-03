@@ -1,0 +1,8 @@
+<page>
+	<id>page-viewer</id>
+	<title>FSO-FFE : Import Document Viewer</title>
+	<title-id>imaging.page.viewer.title</title-id>
+	<description>View an import pdf file</description>
+	<template-instance>template-viewer</template-instance>
+	<authentication>user</authentication>
+</page>

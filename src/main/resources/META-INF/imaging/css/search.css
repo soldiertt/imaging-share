@@ -1,0 +1,131 @@
+.ui-menu .ui-menu-item a {
+	padding: 0 .4em;
+}
+
+#search-form h1 {
+	background-image: url('../img/expand.png');
+	background-repeat:no-repeat;
+	background-position: 110px 4px;
+	color: #2c6d9b;	
+	font-size:17px;
+	margin-top:10px;
+	margin-left:20px;
+}
+#search-form h1:hover {
+	cursor:pointer;
+}
+#search-form form {
+	color: #2c6d9b;	
+	background-color: #f0f0ff;;
+	border:1px solid #2c6d9b;
+	border-radius: 8px;
+	padding-bottom:10px;
+	float:left;
+	width:100%;
+}
+#search-form label {
+	float:left;
+	font-family: arial,helvetica,clean,sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	clear:both;
+	width:110px;
+	margin:10px 3px 0 0;
+	text-align:right;
+}
+
+.ui-datepicker {
+	font-size:0.8em;
+}
+
+.ui-datepicker-trigger {
+    padding:0px;
+    padding-left:5px;
+    vertical-align:baseline;
+    position:relative;
+    top:4px;
+    height:18px;
+}
+
+.inputfield {
+	float:left;
+	margin-top:10px;
+}
+.inputfield input[name='docname']{
+	width:17.5em;
+}
+.inputfield select[name='doctype']{
+	width:17.5em;
+}
+.inputfield select[name='docsource']{
+	width:17.5em;
+}
+.inputfield select[name='doclinked']{
+	width:12em;
+}
+.inputfield input[name='doccreationdate-start'], .inputfield input[name='doccreationdate-end'] {
+	width:9em;
+	margin-bottom: 1px;
+}
+.datefield {
+	display:inline-block;
+}
+
+#search-form #submit, #search-form #clear {
+	margin-top:10px;
+	margin-left:20px;
+	font-weight:bold;
+}
+#search-form #submit:hover, #search-form #clear:hover {
+	cursor:pointer;
+}
+#pb-context {
+	overflow:hidden;
+	background-color:#eee;
+	border:1px solid #ccc;
+	padding-bottom:10px;
+	padding:10px;
+	margin-top:10px;
+}
+.ctx-value {
+	width:250px;
+	float:left;
+	margin-right:50px;
+	background-color: #ddd;
+}
+.ctx-value label {
+	font-weight:bold;
+}
+.searchcol {
+	float:left;
+	padding-left:10px;
+}
+.warning {
+	background-color:#ffffaa;
+	border-radius:8px;
+	margin-bottom:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:25px;
+	background-image: url('../img/icon-warning.png');
+	background-repeat:no-repeat;
+	background-position: 5px 5px;
+}
+#search-results {
+	margin-top:10px;
+	float:left;
+	clear:both;
+	width:100%;
+}
+.action-menu-search {
+	margin-top:3px;
+	margin-bottom:3px;
+}
+.actions-list {
+	margin: 0;
+	padding: 0;
+}
+.actions-list a {
+	height:18px;
+	font-size:1em;
+}

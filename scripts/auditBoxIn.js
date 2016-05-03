@@ -1,0 +1,1 @@
+sudoScript.sudo("alfresco/extension/script/auditBoxIn.js");

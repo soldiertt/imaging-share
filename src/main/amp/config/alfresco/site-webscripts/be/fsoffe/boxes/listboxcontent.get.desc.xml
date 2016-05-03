@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>List box content webscript</shortname>
+	<description>List available document inside a box</description>
+	<family>Imaging Components</family>
+	<url>/imaging/components/boxes/listboxcontent</url>
+</webscript>

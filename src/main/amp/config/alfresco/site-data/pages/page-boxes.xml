@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+	<id>page-boxes</id>
+	<title>FSO - FFE : Boxes</title>
+	<title-id>imaging.page.boxes.title</title-id>
+	<description>Main page to list functional boxes and browse documents</description>
+	<template-instance>template-boxes</template-instance>
+	<authentication>user</authentication>
+</page>

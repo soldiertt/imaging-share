@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Multi action</shortname>
+  <description>Forward to backend action for a list of items</description>
+  <family>Imaging Actions</family>
+  <url>/imaging/action/multiaction</url>
+  <format default="json">argument</format>
+</webscript>

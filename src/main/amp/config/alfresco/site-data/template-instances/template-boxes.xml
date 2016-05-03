@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template-instance>
+	<template-type>be/fsoffe/boxes-view</template-type>.
+	<description>Functional boxes default template</description>
+	<components>
+
+	  <!-- Imaging header -->
+	  <component>
+		<region-id>imaging-header</region-id>
+		<url>/imaging/components/utils/imaging-header</url>
+	  </component>
+	  
+      <!-- Boxes -->
+	  <component>
+		<region-id>box-list</region-id>
+		<url>/imaging/components/boxes/listboxes</url>
+	  </component>
+
+   </components>
+</template-instance>

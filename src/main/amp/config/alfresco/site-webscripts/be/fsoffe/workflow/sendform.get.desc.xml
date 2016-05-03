@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Select a user</shortname>
+	<description>Display a combobox where we can select a user</description>
+	<family>Imaging Components</family>
+	<url>/imaging/components/workflow/sendform</url>
+</webscript>

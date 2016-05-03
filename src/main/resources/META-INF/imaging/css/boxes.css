@@ -1,0 +1,141 @@
+#boxname-zone {
+	float:right;
+	margin-right:20px;
+	font-size:18px;
+}
+
+#content { 
+    float:left; 
+    width:100%; 
+    margin:0px; 
+    clear:both; 
+} 
+
+.table-layout {
+	display:table;
+    width:100%;
+}
+
+#left-menu { 
+  padding: 5px;
+  height: 100%;
+  display:table-cell;
+  border-right: 2px solid #E7E7E7;
+  white-space: nowrap;
+  max-width:230px;
+  vertical-align: top;
+} 
+
+#left-menu ul { 
+  list-style-type:none; 
+  padding:0; 
+} 
+
+#left-menu ul li { 
+    padding:3px 10px 3px 20px; 
+} 
+#left-menu ul li:hover { 
+    cursor:pointer; 
+} 
+li#workitem, li#boxes, li#outbox, li#admin, li.normalbox { 
+    background-image:url("../img/folder.png"); 
+    background-repeat:no-repeat; 
+    background-position: 0px 3px; 
+} 
+li#mypersonal { 
+    background-image:url("../img/home.gif"); 
+    background-repeat:no-repeat; 
+    background-position: left; 
+    background-position: 0px 3px; 
+} 
+.selected-box { 
+    background-color:#6CA5CE !important; 
+    color:#fff; 
+} 
+  
+#box-content {
+  display:table-cell;
+  vertical-align: top;
+} 
+
+#actions-bar a.multi {
+	visibility : hidden;
+}
+#search-table {
+	float:right;
+}
+#search-table input {
+	width: 15em;
+	display: inline-block;
+}
+.actions {
+	position:relative;
+}
+
+div.action-menu {
+	text-align:left;
+	display:none;
+	position:absolute;
+	top:18px;
+	left:3px;
+	width:100px;
+	z-index:1;
+}
+ul.actions-list {
+	width:120px;
+	font-size:11px;
+}
+ul.actions-list img{
+	border:0px;
+}
+
+#actions-bar {
+	border-radius:6px;
+	margin-top:5px;
+	margin-bottom:5px;
+	overflow:hidden;
+}
+#actions-bar a {
+	color: black;
+	display:block;
+	float:left;
+	background-color:#EBEADB;
+	border-radius:3px;
+	padding:2px 4px 2px 4px;
+	margin-left:5px;
+	margin-right:5px;
+	font-family:Verdana;
+	border:1px solid grey;
+	font-size: 12px;
+}
+#actions-bar a:hover {
+	text-decoration: none;
+	background-color: #DBDACB;
+}
+#actions-bar a img {
+	vertical-align:middle;
+	border:0;
+}
+#actions-bar a span {
+	vertical-align:middle;
+	margin-left:5px;
+}
+
+#doc-tabs { 
+    margin-top:50px; 
+    margin-left:5px; 
+} 
+
+.indexfield {
+	float:left;
+	height:30px;
+}
+.indexfield label {
+	float:left;
+}
+.indexfield .indexinput.col2 {
+	float:left;
+}
+.indexfield .indexinput.col4 {
+	float:left;
+}

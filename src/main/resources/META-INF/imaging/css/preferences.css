@@ -1,0 +1,33 @@
+#pref-form {
+	color: #2c6d9b;
+	overflow: hidden;
+	padding: 10px;
+	background-color: #f0f0ff;
+	border: 1px solid #2c6d9b;
+	border-radius:8px;
+}
+#pref-form h1 {
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size: 20px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #2c6d9b;
+}
+#pref-form label {
+	width:200px;
+	float:left;
+	clear:both;
+	line-height:30px;
+	font-weight: normal;
+	font-size: 13px;
+}
+#pref-form .preffield {
+	width:200px;
+	float:left;
+}
+#pref-form #submit {
+	float:left;
+	clear:both;
+	margin-top:10px;
+	font-weight:bold;
+}

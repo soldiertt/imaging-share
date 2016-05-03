@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>config-myactivities</shortname>
+  <description>Configuration dialog for Myactivities dashlet</description>
+  <url>/imaging/dashlet/myactivities/config</url>
+</webscript>

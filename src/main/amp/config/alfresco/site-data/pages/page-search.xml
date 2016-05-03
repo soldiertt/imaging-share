@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+	<id>page-search</id>
+	<title>FSO - FFE : Search</title>
+	<title-id>imaging.page.search.title</title-id>
+	<description>Search page allowing user to search documents in repository</description>
+	<template-instance>template-search</template-instance>
+	<authentication>user</authentication>
+</page>

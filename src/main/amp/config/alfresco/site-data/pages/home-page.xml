@@ -1,0 +1,4 @@
+<page>
+    <template-instance>home-page</template-instance>
+    <authentication>user</authentication>
+</page>

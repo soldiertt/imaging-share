@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Preferences form</shortname>
+	<description>Display the preferences form</description>
+	<family>Imaging Components</family>
+	<url>/imaging/components/preferences/form</url>
+</webscript>

@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Simple action</shortname>
+  <description>Forward to backend action</description>
+  <family>Imaging Actions</family>
+  <url>/imaging/action/simpleaction</url>
+  <format default="json">argument</format>
+</webscript>

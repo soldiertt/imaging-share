@@ -1,0 +1,22 @@
+<template-instance>
+	<template-type>be/fsoffe/document</template-type>
+	<components>
+
+		<component>
+			<region-id>web-preview</region-id>
+			<url>/imaging/components/document/preview/daeja-preview</url>
+			<properties>
+				<nodeRef>{nodeRef}</nodeRef>
+			</properties>
+		</component>
+		
+		<component>
+			<region-id>document-details</region-id>
+			<url>/imaging/components/document/docdetails</url>
+			<properties>
+				<nodeRef>{nodeRef}</nodeRef>
+			</properties>
+		</component>
+
+	</components>
+</template-instance>

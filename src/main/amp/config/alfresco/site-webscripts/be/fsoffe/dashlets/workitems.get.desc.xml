@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Workitem (imaging)</shortname>
+	<description>Dashlet to display documents in Work Items</description>
+	<family>dashlet</family>
+	<url>/imaging/dashlet/workitems</url>
+</webscript>

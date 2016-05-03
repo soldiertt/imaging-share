@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Render the fds document actions</shortname>
+	<description>List available actions upon a fds document and render them</description>
+	<family>Imaging Actions</family>
+	<url>/imaging/action/renderdocactions</url>
+</webscript>

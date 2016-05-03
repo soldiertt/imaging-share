@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>My tasks (imaging)</shortname>
+	<description>Dashlet to display tasks (assigned documents)</description>
+	<family>dashlet</family>
+	<url>/imaging/dashlet/mytasks</url>
+</webscript>

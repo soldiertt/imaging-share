@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>List imports or notes from a document</shortname>
+	<description>List available import or notes inside a document</description>
+	<family>Imaging Components</family>
+	<url>/imaging/components/document/listsubdocs</url>
+</webscript>

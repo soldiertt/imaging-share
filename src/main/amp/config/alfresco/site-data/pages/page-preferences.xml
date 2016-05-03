@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+	<id>page-preferences</id>
+	<title>FSO - FFE : My preferences</title>
+	<title-id>imaging.page.preferences.title</title-id>
+	<description>change my preferences settings</description>
+	<template-instance>template-preferences</template-instance>
+	<authentication>user</authentication>
+</page>

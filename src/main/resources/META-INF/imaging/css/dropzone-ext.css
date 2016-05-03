@@ -1,0 +1,49 @@
+.dropzone {
+	min-height: inherit !important;
+	padding: 5px;
+	color: #666;
+	height: 200px;
+	overflow: auto;
+}
+.dz-preview {
+	margin: 5px !important;
+	font-size: 1em !important;
+	background: rgba(255,255,255,0.5) !important;
+}
+.dz-details {
+	width: 150px !important;
+	word-wrap: break-word;
+	background: none !important;
+}
+.dz-filename {
+	min-height: 28px;
+	padding: 5px;
+}
+.dz-size {
+	position: relative !important;
+	line-height: normal !important;
+	height: auto !important;
+	padding: 3px;
+}
+.dz-filename, .dz-size {
+	background: rgba(235,235,235,0.5) !important;
+}
+
+.dz-remove {
+	float:right;
+	width:18px;
+	height:18px;
+	background: url("../img/delimport-16.png") no-repeat center;
+	cursor:pointer !important;
+	margin-top: 3px;
+}
+
+.xls, .xlsx {
+	background: rgba(255,255,255,0.5) url("../../components/images/filetypes/xls-file-48.png") no-repeat center !important;
+}
+.doc, .docx {
+	background: rgba(255,255,255,0.5) url("../../components/images/filetypes/doc-file-48.png") no-repeat center !important;
+}
+.pdf {
+	background: rgba(255,255,255,0.5) url("../../components/images/filetypes/pdf-file-48.png") no-repeat center !important;
+}

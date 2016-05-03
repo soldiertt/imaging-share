@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+	<id>page-dashboard</id>
+	<title>FSO - FFE : Boxes</title>
+	<title-id>imaging.page.dashboard.title</title-id>
+	<description>Dashboard page</description>
+	<template-instance>template-dashboard</template-instance>
+	<authentication>user</authentication>
+</page>

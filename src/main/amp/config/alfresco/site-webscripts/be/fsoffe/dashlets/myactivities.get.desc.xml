@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>My activities</shortname>
+	<description>Dashlet to display my personal activities</description>
+	<family>dashlet</family>
+	<url>/imaging/dashlet/myactivities</url>
+</webscript>

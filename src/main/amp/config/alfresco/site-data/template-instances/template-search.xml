@@ -1,0 +1,22 @@
+<template-instance>
+	<template-type>be/fsoffe/search</template-type>
+	<components>
+	
+		<!-- Imaging header -->
+	  	<component>
+			<region-id>imaging-header</region-id>
+			<url>/imaging/components/utils/imaging-header</url>
+	  	</component>
+	  
+		<component>
+			<region-id>search-form</region-id>
+			<url>/imaging/components/search/searchform</url>
+		</component>
+		
+        <component>
+          <region-id>search-results</region-id>
+          <url>/imaging/components/search/searchresults</url>
+        </component>
+    
+	</components>
+</template-instance>

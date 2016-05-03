@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Main document reference</shortname>
+  <description>Get the nodeRef of the first child content document</description>
+  <family>Imaging Utils</family>
+  <url>/imaging/utils/document/maindocref</url>
+  <format default="json">argument</format>
+</webscript>

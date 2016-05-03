@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Work Items</shortname>
+	<description>Component to display documents in Work Items</description>
+	<family>Imaging Components</family>
+	<url>/imaging/components/boxes/workitem</url>
+</webscript>

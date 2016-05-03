@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template-instance>
+	<template-type>be/fsoffe/dashboard</template-type>.
+	<description>Dashboard default template</description>
+	<components>
+
+	  <!-- Imaging header -->
+	  <component>
+		<region-id>imaging-header</region-id>
+		<url>/imaging/components/utils/imaging-header</url>
+	  </component>
+	  
+	  <component>
+		<region-id>workitem-dashlet</region-id>
+		<url>/imaging/dashlet/workitems</url>
+	  </component>
+
+	  <component>
+		<region-id>myactivities-dashlet</region-id>
+		<url>/imaging/dashlet/myactivities</url>
+	  </component>
+	  
+	  <component>
+		<region-id>mytasks-dashlet</region-id>
+		<url>/imaging/dashlet/mytasks</url>
+	  </component>
+	  
+	  <component>
+		<region-id>mypersonal-dashlet</region-id>
+		<url>/imaging/dashlet/mypersonal</url>
+	  </component>
+	  
+   </components>
+</template-instance>

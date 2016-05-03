@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>config-myactivities-post</shortname>
+  <description>Configuration dialog for Myactivities dashlet</description>
+  <url>/imaging/dashlet/myactivities/config/{componentId}</url>
+  <format default="json">argument</format>
+</webscript>

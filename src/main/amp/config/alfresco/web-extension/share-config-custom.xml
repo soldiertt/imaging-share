@@ -1,0 +1,583 @@
+<alfresco-config>
+
+   <config evaluator="string-compare" condition="WebFramework">
+   
+   	<web-framework>
+   		<generate-css-data-images>false</generate-css-data-images>
+   	</web-framework>
+   </config>
+      
+   <config replace="true">
+   
+   <flags>
+		<!-- Developer debugging setting to turn on DEBUG mode for client scripts 
+			in the browser -->
+		<client-debug>true</client-debug>
+	
+		<!-- LOGGING can always be toggled at runtime when in DEBUG mode (Ctrl, 
+			Ctrl, Shift, Shift). This flag automatically activates logging on page load. -->
+		<client-debug-autologging>false</client-debug-autologging>
+	</flags>
+      
+       <header>
+         <app-items>
+            <!-- defaults: icon="{id}.png" label="header.{id}.label" description="header.{id}.description" -->
+            <item type="link" permission="admin" id="my-dashboard">{userdashboardpage}</item>
+            <item type="js" permission="admin" id="sites">Alfresco.module.Sites</item>
+            <item type="link" id="people" permission="admin">/people-finder</item>
+            <item type="link" id="repository" condition="conditionRepositoryRootNode" permission="admin">/repository</item>
+            <item type="container" id="more" permission="admin">
+               <container-group id="my" permission="admin">
+                  <item type="link" id="my-tasks">/my-tasks</item>
+                  <item type="link" id="my-workflows">/my-workflows</item>
+                  <item type="link" id="my-content">/user/user-content</item>
+                  <item type="link" id="my-sites">/user/user-sites</item>
+                  <item type="link" id="my-profile">{userprofilepage}</item>
+               </container-group>
+               <container-group id="tools" permission="admin">
+                  <item type="link" id="application">/console/admin-console/application</item>
+                  <item type="link" id="groups">/console/admin-console/groups</item>
+                  <item type="link" id="replication-jobs" condition="!conditionEditionTeam">/console/admin-console/replication-jobs</item>
+                  <item type="link" id="repository">/console/admin-console/repository</item>
+                  <item type="link" id="trashcan">/console/admin-console/trashcan</item>
+                  <item type="link" id="users">/console/admin-console/users</item>
+                  <item type="link" id="more">/console/admin-console/</item>
+               </container-group>
+            </item>
+         </app-items>
+         <user-items>
+            <item type="container" id="user" icon="" description="">
+               <container-group id="usermenu" label="">
+                  <item type="link" id="preferences">/site/imaging/page-preferences</item>
+                  <item type="user" id="status">{userprofilepage}</item>
+                  <item type="link" id="my-profile" permission="admin">{userprofilepage}</item>
+                  <item type="link" id="change-password" condition="user.capabilities.isMutable">/user/change-password</item>
+                  <item type="external-link" id="help">{share-help}</item>
+                  <item type="link" id="logout" condition="!context.externalAuthentication">/dologout</item>
+               </container-group>
+            </item>
+         </user-items>
+         <dependencies>
+            <css src="/modules/create-site.css" />
+            <css src="/modules/header/sites.css" />
+            <js src="/modules/create-site.js" />
+            <js src="/modules/header/sites.js" />
+         </dependencies>
+      </header>
+   </config> 
+    
+   <config evaluator="string-compare" condition="SitePages"> 
+	  <pages> 
+	    <page id="page-dashboard">page-dashboard</page>
+	    <page id="page-boxes">page-boxes</page>
+	    <page id="page-document">page-document</page>
+	    <page id="page-viewer">page-viewer</page>
+	    <page id="page-search">page-search</page>
+	    <page id="page-preferences">page-preferences</page>
+	  </pages> 
+	</config>
+
+	<config evaluator="string-compare" condition="DocumentLibrary" replace="true">
+		<types>
+			<type name="cm:content">
+				<subtype name="fds:content" />
+			</type>
+			<type name="cm:folder">
+				<subtype name="fds:folder" />
+			</type>
+			<type name="fds:folder">
+				<subtype name="fds:document" />
+			</type>
+			
+		</types>
+		
+		<aspects>
+			<visible></visible>
+			<addable></addable>
+			<removeable></removeable>
+		</aspects>
+		
+		<!-- 
+		<create-content>
+			<content mimetype="text/plain" icon="plain-text" label="Imaging basic folder" itemid="fds:folder"/>
+			<content id="myContent" label="Imaging basic folder" type="pagelink" index="90" >
+            	<param name="page">create-content?destination={nodeRef}&amp;itemId=fds:folder&amp;mimeType=text/plain</param>
+			</content>
+			<content mimetype="text/plain" icon="plain-text" label="Imaging basic content" itemid="fds:content"/>
+			<content mimetype="text/plain" icon="plain-text" label="Imaging document" itemid="fds:document"/>
+		</create-content>
+		-->
+		
+		<create-content-by-template>false</create-content-by-template>
+	
+	</config>
+	
+	<!-- Settings Form Definition -->
+	
+	<config evaluator="model-type" condition="fds:routingTableDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:docTypeDlInput" />
+					<show id="fds:routineTableOutput" />
+				</field-visibility>
+				<appearance>
+					<field id="fds:docTypeDlInput">
+						<control template="/org/alfresco/components/form/controls/selectone_docType.ftl" />
+					</field>
+					<field id="fds:routineTableOutput">
+						<control template="/org/alfresco/components/form/controls/selectone_boxDefaultNone.ftl" />
+					</field>
+				</appearance>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+			<form id="datagrid">
+				<field-visibility>
+					<show id="fds:docTypeDlInput" />
+					<show id="fds:routineTableOutput" />
+				</field-visibility>
+				<appearance>
+					<field id="fds:docTypeDlInput">
+						<control template="/org/alfresco/components/form/controls/selectone_docType.ftl" />
+					</field>
+					<field id="fds:routineTableOutput">
+						<control template="/org/alfresco/components/form/controls/selectone_boxDefaultNone.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	 
+	<config evaluator="node-type" condition="fds:routingTableDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:docTypeDlInput" />
+					<show id="fds:routineTableOutput" />
+				</field-visibility>
+				<appearance>
+					<field id="fds:docTypeDlInput">
+						<control template="/org/alfresco/components/form/controls/selectone_docType.ftl" />
+					</field>
+					<field id="fds:routineTableOutput">
+						<control template="/org/alfresco/components/form/controls/selectone_boxDefaultNone.ftl" />
+					</field>
+				</appearance>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="fds:standardDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:typeParamStandard" />
+					<show id="fds:techIdParamStandard" />
+					<show id="fds:idParamStandard" />
+					<show id="fds:libParamStandard" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+			<form id="datagrid">
+				<field-visibility>
+					<show id="fds:typeParamStandard" />
+					<show id="fds:techIdParamStandard" />
+					<show id="fds:idParamStandard" />
+					<show id="fds:libParamStandard" />
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="node-type" condition="fds:standardDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:typeParamStandard" />
+					<show id="fds:techIdParamStandard" />
+					<show id="fds:idParamStandard" />
+					<show id="fds:libParamStandard" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="fds:boxesDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:idBoxe" />
+					<show id="fds:libBoxe" />
+					<show id="fds:stateBoxe" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+			<form id="datagrid">
+				<field-visibility>
+					<show id="fds:idBoxe" />
+					<show id="fds:libBoxe" />
+					<show id="fds:stateBoxe" />
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="node-type" condition="fds:boxesDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:idBoxe" />
+					<show id="fds:libBoxe" />
+					<show id="fds:stateBoxe" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="fds:imagingParametersList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:idParam" />
+					<show id="fds:valueParam" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+			<form id="datagrid">
+				<field-visibility>
+					<show id="fds:idParam" />
+					<show id="fds:valueParam" />
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="node-type" condition="fds:imagingParametersList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:idParam" />
+					<show id="fds:valueParam" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="fds:statistiqueDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:statIdDoc" />
+					<show id="fds:statDocName"/>
+					<show id="fds:statDocType"/>
+					<show id="fds:statDocFrom"/>
+					<show id="fds:statDocTo"/>	
+					<show id="fds:statActorid" />
+					<show id="fds:statActorEntryTime" />
+					<show id="fds:statActions" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+			<form id="datagrid">
+				<field-visibility>
+					<show id="fds:statIdDoc" />
+					<show id="fds:statDocName"/>
+					<show id="fds:statDocType"/>
+					<show id="fds:statDocFrom"/>
+					<show id="fds:statDocTo"/>
+					<show id="fds:statActorid" />
+					<show id="fds:statActorEntryTime" />
+					<show id="fds:statActions" />
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	 
+	<config evaluator="model-type" condition="fds:preferencesDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:prefUserid" />
+					<show id="fds:prefName" />
+					<show id="fds:prefValue" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+			<form id="datagrid">
+				<field-visibility>
+					<show id="fds:prefUserid" />
+					<show id="fds:prefName" />
+					<show id="fds:prefValue" />
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	 
+	<config evaluator="node-type" condition="fds:preferencesDataList">
+		<forms>	
+			<form>
+				<field-visibility>
+					<show id="fds:prefUserid" />
+					<show id="fds:prefName" />
+					<show id="fds:prefValue" />
+				</field-visibility>
+				<create-form template="/org/alfresco/components/data-lists/forms/dataitem.ftl" />
+			</form>
+		</forms>
+	</config>
+	
+	<!-- Share Forms Definition -->
+	
+	<config evaluator="node-type" condition="fds:folder">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="cm:name"/>
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="node-type" condition="fds:document">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="fds:docType"/>
+					<show id="fds:docClass"/>
+					<show id="fds:docSource"/>
+					<show id="fds:docPriority"/>
+					<show id="fds:docLinked"/>
+					<show id="fds:docInDate"/>
+					<show id="fds:docLetter"/>
+					<show id="fds:docLetterType"/>
+				</field-visibility>
+				<appearance>
+					<field id="fds:docType">
+						<control template="/org/alfresco/components/form/controls/selectone_docType.ftl" />
+					</field>
+					<field id="fds:docClass">
+						<control template="/org/alfresco/components/form/controls/selectone_docClass.ftl" />
+					</field>
+					<field id="fds:docSource">
+						<control template="/org/alfresco/components/form/controls/selectone_docSource.ftl" />
+					</field>
+					<field id="fds:docPriority">
+						<control template="/org/alfresco/components/form/controls/selectone_docPriority.ftl" />
+					</field>
+					<field id="fds:docInDate">
+						<control template="/org/alfresco/components/form/controls/selectone_docPriority.ftl" />
+					</field>
+					<field id="fds:docLetterType">
+						<control template="/org/alfresco/components/form/controls/selectone_docLetterType.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="node-type" condition="fds:content">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="cm:name"/>
+					<show id="fds:contentOrigin"/>
+				</field-visibility>
+				<appearance>
+					<field id="fds:contentOrigin">
+						<control template="/org/alfresco/components/form/controls/selectone_contentOrigin.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<!-- Alfresco's Documents Aspects -->
+	<config evaluator="aspect" condition="fds:workflow">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="fds:wkMessage"/>
+					<show id="fds:workExpeditor"/>
+					<show id="fds:workAssignee"/>
+					<show id="fds:workBox"/>
+					<show id="fds:workEntryTime"/>
+					<show id="fds:docDossierNr"/>
+					<show id="fds:workDossierStatus"/>
+					<show id="fds:workPending"/>
+				</field-visibility>
+				<appearance>
+					<field id="fds:wkMessage">
+						<control template="/org/alfresco/components/form/controls/info.ftl" />
+					</field>
+					<field id="fds:workBox">
+						<control template="/org/alfresco/components/form/controls/selectone_boxDefaultExit.ftl" />
+					</field>
+					<field id="fds:workDossierStatus">
+						<control template="/org/alfresco/components/form/controls/selectone_docStatus.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="aspect" condition="fds:workitem">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="fds:itemOwner"/>
+					<show id="fds:itemEntryTime"/>
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	
+	<!-- Workflow Forms Definition -->
+	<config evaluator="string-compare" condition="activiti$imagingWorkflow">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:workflowDescription" />
+					<show id="packageItems" />				
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label-id="workflow.set.general" />
+					<set id="items" appearance="title" label-id="workflow.set.items" />
+					
+					<field id="bpm:workflowDescription" label-id="workflow.field.message">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl">
+							<control-param name="style">width: 95%</control-param>
+						</control>					
+					</field>
+					
+					<field id="packageItems" set="items" />
+					
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="task-type" condition="fdswk:sendMappingTask">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="message" />
+					<show id="fdswk:boxDocClass" />
+					<show id="fdswk:boxDocType" />
+					<show id="fdswk:dossierNr" />
+					<show id="fdswk:messages"  />
+					<show id="fdswk:boxDocStatus" />
+					<show id="fdswk:boxList" />
+					<show id="fdswk:boxAssignee" />
+					<show id="packageItems" />
+					<show id="transitions" />
+				</field-visibility>
+				<appearance>
+					<set id="docProperties" appearance="title" template="/org/alfresco/components/form/3-column-set.ftl" label-id="Properties" />
+					<set id="boxesAssignees" appearance="title" template="/org/alfresco/components/form/2-column-set.ftl" label-id="Boxes Assignees" />
+					<set id="items" appearance="title" label-id="workflow.set.items" />
+					<set id="response" appearance="title" label-id="workflow.set.response" />
+					<set id="wklMessages" appearance="title" label-id="Messages" />
+					
+					<field id="message">
+						<control template="/org/alfresco/components/form/controls/info.ftl" />
+					</field>
+					
+					<field id="fdswk:boxDocType" set="docProperties" />
+					<field id="fdswk:boxDocClass" set="docProperties">
+						<control template="/org/alfresco/components/form/controls/info.ftl" />
+					</field>
+					<field id="fdswk:dossierNr" set="docProperties" />
+					<field id="fdswk:boxDocStatus" set="docProperties" />
+					
+					<field id="fdswk:boxList" set="boxesAssignees" />
+					<field id="fdswk:boxAssignee" label="Assignee" set="boxesAssignees" />
+										
+					<field id="fdswk:messages" set="wklMessages">
+						<control template="/org/alfresco/components/form/controls/info.ftl" />
+					</field>
+					
+					<field id="packageItems" set="items" />
+					<field id="transitions" set="response"  />
+					
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+   <config evaluator="string-compare" condition="Remote">
+      <remote>
+         <connector>
+         	<id>alfrescoCookie</id>
+         	<name>Alfresco Connector</name>
+         	<description>Connects to an Alfresco instance using cookie-based authentication</description>
+         	<class>org.alfresco.web.site.servlet.SlingshotAlfrescoConnector</class>
+         </connector>
+         
+         <endpoint>
+            <id>alfresco</id>
+            <name>Alfresco - user access</name>
+            <description>Access to Alfresco Repository WebScripts that require user authentication</description>
+            <connector-id>alfrescoCookie</connector-id>
+            <endpoint-url>http://localhost:8080/alfresco/wcs</endpoint-url>
+            <identity>user</identity>
+            <external-auth>true</external-auth>
+         </endpoint>
+      </remote>
+
+   </config>
+   
+    <!-- Kerberos settings -->
+   <!-- To enable kerberos rename this condition to "Kerberos" -->
+   
+   <config evaluator="string-compare" condition="Kerberos" replace="true">
+      <kerberos>
+         <!--
+            Password for HTTP service account.
+            The account name *must* be built from the HTTP server name, in the format :
+               HTTP/<server_name>@<realm>
+            (NB this is because the web browser requests an ST for the
+            HTTP/<server_name> principal in the current realm, so if we're to decode
+            that ST, it has to match.)
+         -->
+         <password>alfrescohttp</password>
+         <!--
+            Kerberos realm and KDC address.
+         -->
+         <realm>FSOFFE.ONERVA.FGOV.BE</realm>
+         <!--
+            Service Principal Name to use on the repository tier.
+            This must be like: HTTP/host.name@REALM
+         -->
+         <endpoint-spn>HTTP/VM-imgtest-repo.fsoffe.onerva.fgov.be@FSOFFE.ONERVA.FGOV.BE</endpoint-spn>
+         <!--
+            JAAS login configuration entry name.
+         -->
+         <config-entry>ShareHTTP</config-entry>
+         <stripUserNameSuffix>true</stripUserNameSuffix>
+      </kerberos>
+   </config>
+   
+   
+   <config evaluator="string-compare" condition="CSRFPolicy" replace="true">
+	   <filter>
+	      <rule>
+	         <request>
+	            <method>POST|PUT|DELETE</method>
+	            <session>
+	               <attribute name="_alf_USER_ID">.*</attribute>
+	            </session>
+	         </request>
+	         <action name="assertReferer">
+	            <param name="always">false</param>
+	         </action>
+	         <action name="assertOrigin">
+	            <param name="always">false</param>
+	         </action>
+	      </rule>
+	   </filter>
+	</config>
+</alfresco-config>

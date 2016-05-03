@@ -1,0 +1,54 @@
+/**************/
+/** COMMENTS **/
+/**************/
+
+#tab-notes {
+	font-size: 0.9em;
+}
+
+#tab-notes h1 {
+	font-size: 1.4em;
+	padding: 2px;
+	margin: 10px 0 5px 0;
+	border-bottom: 1px solid #A9A9A9;
+}
+
+#newcomment, #newcomment textarea, .editcomment, .editcomment textarea {
+	width: 100%;
+}
+
+#tab-notes .comments-list > ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.btn-displaycomment, .btn-addcomment, .btn-savecomment {
+	margin:10px;
+}
+
+#tab-notes .comments-list > ul > li {
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
+#tab-notes .viewmode h2, #tab-notes .editcomment h2 {
+	font-size: 1em;
+	font-weight: bold;
+	background-color:#EBEADB;
+	padding: 5px;
+	margin: 0;
+}
+
+#tab-notes .comment-content {
+	padding: 5px;
+}
+
+.right-actions {
+	float:right;
+}
+.delete-comment-link, .edit-comment-link {
+	cursor:pointer;
+}
+
+
+/** END COMMENTS **/

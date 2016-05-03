@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>List boxes webscript</shortname>
+	<description>List available boxes for a user</description>
+	<family>Imaging Components</family>
+	<url>/imaging/components/boxes/listboxes</url>
+</webscript>

@@ -1,0 +1,17 @@
+<template-instance>
+	<template-type>be/fsoffe/preferences</template-type>
+	<components>
+	
+		<!-- Imaging header -->
+	  	<component>
+			<region-id>imaging-header</region-id>
+			<url>/imaging/components/utils/imaging-header</url>
+	  	</component>
+
+		<component>
+			<region-id>preferences-form</region-id>
+			<url>/imaging/components/preferences/form</url>
+		</component>
+		
+	</components>
+</template-instance>

@@ -1,0 +1,8 @@
+<page>
+	<id>page-document</id>
+	<title>FSO-FFE : Imaging Document</title>
+	<title-id>imaging.page.document.title</title-id>
+	<description>Browse an imaging document</description>
+	<template-instance>template-document</template-instance>
+	<authentication>user</authentication>
+</page>
