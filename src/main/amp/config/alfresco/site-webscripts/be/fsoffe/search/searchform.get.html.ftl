@@ -25,12 +25,12 @@
 		<h1>Search form</h1>
 		<form action="../../imaging/components/search/searchresults?search=true">
 			<div class="searchcol">
-				<label>Document name :</label>
+				<label>Document name</label>
 				<div class="inputfield">
 					<input type="text" name="docname" class="form-control" />
 				</div>
 				
-				<label>Document type :</label>
+				<label>Document type</label>
 				<div class="inputfield">
 					<select name="doctype" data-placeholder="Select a document type ..." class="form-control">
 						<#list doctypes as doctype>
@@ -39,7 +39,7 @@
 					</select>
 				</div>
 				
-				<label>Source :</label>
+				<label>Source</label>
 				<div class="inputfield">
 					<select name="docsource" data-placeholder="Select a source ..." class="form-control">
 						<#list docsources as docsource>
@@ -50,7 +50,7 @@
 				
 			</div>
 			<div class="searchcol">
-				<label>Linked? : </label>
+				<label>Linked?</label>
 				<div class="inputfield">
 					<select name="doclinked" class="form-control">
 						<option value=""></option>
@@ -58,26 +58,26 @@
 						<option value="false">not linked</option>
 					</select>
 				</div>
-				<label>Creation date : </label>
+				<label>Creation date</label>
 				<div class="inputfield">
 					<input type="text" name="doccreationdate-start" class="datefield form-control" /> (from) <br/>
 					<input type="text" name="doccreationdate-end" class="datefield form-control" /> (to)
 				</div>
 			</div>
 			<div class="searchcol">
-				<label>Content : </label>
+				<label>Content</label>
 				<div class="inputfield">
 					<input type="text" name="fulltext1" class="form-control" />
 				</div>
 				<label>
-					<input type="radio" name="operator1" value="or" checked />or
+					<input type="radio" name="operator1" value="or" checked /> or
 					&nbsp;
-					<input type="radio" name="operator1" value="and" />and
+					<input type="radio" name="operator1" value="and" /> and
 				</label>
 				<div class="inputfield">
 					<input type="text" name="fulltext2" class="form-control" />
 				</div>
-				<label>Dossier Nr : </label>
+				<label>Dossier Nr</label>
 				<div class="inputfield">
 					<input type="text" name="dossiernr" class="form-control" />
 				</div>

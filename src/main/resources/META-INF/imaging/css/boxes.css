@@ -82,7 +82,7 @@ div.action-menu {
 	z-index:1;
 }
 ul.actions-list {
-	width:120px;
+	width:125px;
 	font-size:11px;
 }
 ul.actions-list img{
@@ -100,10 +100,11 @@ ul.actions-list img{
 	display:block;
 	float:left;
 	background-color:#EBEADB;
+	background-image: linear-gradient(to bottom,#ebeadb 0,#f6f6f6 100%);
 	border-radius:3px;
-	padding:2px 4px 2px 4px;
-	margin-left:5px;
-	margin-right:5px;
+	padding:4px 6px;
+	margin-left:3px;
+	margin-right:3px;
 	font-family:Verdana;
 	border:1px solid grey;
 	font-size: 12px;
@@ -111,6 +112,10 @@ ul.actions-list img{
 #actions-bar a:hover {
 	text-decoration: none;
 	background-color: #DBDACB;
+	background-image: linear-gradient(to bottom,#cbcabb 0,#ebeadb 100%);
+}
+#actions-bar a:focus {
+	text-decoration: none;
 }
 #actions-bar a img {
 	vertical-align:middle;

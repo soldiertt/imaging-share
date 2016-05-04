@@ -67,16 +67,16 @@ window.viewonehandler = function(id, text) {
 	if (id === 30) { //User create an annotation
 		
 		annotationLabel = text.toLowerCase();
-		strAnnotProperties = ViewONE.getAnnotation(annotationLabel);
+		//strAnnotProperties = ViewONE.getAnnotation(annotationLabel);
 		
-		if (strAnnotProperties.indexOf("TYPE = [TEXT]") == 0 && (annotationLabel.indexOf("stamp") == 0 || annotationLabel.indexOf("tampon") == 0 || annotationLabel.indexOf("stempel") == 0)) {
-			ViewONE.modifyAnnotation(annotationLabel, "owner=admin");
-			nodeRef = Imaging.utils.getURLParameter("nodeRef");	
-			jsonData = {nodeRef: nodeRef};
+		//if (strAnnotProperties.indexOf("TYPE = [TEXT]") == 0 && (annotationLabel.indexOf("stamp") == 0 || annotationLabel.indexOf("tampon") == 0 || annotationLabel.indexOf("stempel") == 0)) {
+		//	ViewONE.modifyAnnotation(annotationLabel, "owner=admin");
+		//	nodeRef = Imaging.utils.getURLParameter("nodeRef");	
+		//	jsonData = {nodeRef: nodeRef};
 			
-			Imaging.ajax.postJson(WS_URLS.stampAuditEvent, jsonData, function(){});
+		//	Imaging.ajax.postJson(WS_URLS.stampAuditEvent, jsonData, function(){});
 				
-		}
+		//}
 		
 		if (window.annotationautosave && (annotationLabel.indexOf("arrow") === 0 || annotationLabel.indexOf("highlight") === 0 || annotationLabel.indexOf("flèche") === 0) || 
 				annotationLabel.indexOf("surbrillance") === 0 || annotationLabel.indexOf("pijl") === 0 || annotationLabel.indexOf("markeren") === 0) {

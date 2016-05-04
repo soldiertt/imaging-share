@@ -989,11 +989,11 @@ Imaging.callbackMgr = function() {
 				}
 			};
 			
-			if (Imaging.utils.getURLPage() === "page-document" && typeof ViewONE !== "undefined" && ViewONE.isAnnotationsUpdated()) {
-				Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
-			} else {
+			//if (Imaging.utils.getURLPage() === "page-document" && typeof ViewONE !== "undefined" && ViewONE.isAnnotationsUpdated()) {
+			//	Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
+			//} else {
 				executeRelease();
-			}
+			//}
 			
 		},
 		/**
@@ -1034,11 +1034,11 @@ Imaging.callbackMgr = function() {
 			};
 			
 			if (typeof ViewONE !== "undefined") { // Viewer applet is not crashed
-				if (Imaging.utils.getURLPage() === "page-document" && ViewONE.isAnnotationsUpdated()) {
-					Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
-				} else {
+				//if (Imaging.utils.getURLPage() === "page-document" && ViewONE.isAnnotationsUpdated()) {
+				//	Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
+				//} else {
 					Imaging.utils.reloadWorkitemPage();
-				}
+				//}
 			} else {
 				Imaging.utils.reloadWorkitemPage();
 			}
@@ -1059,11 +1059,11 @@ Imaging.callbackMgr = function() {
 				};
 			
 			if (typeof ViewONE !== "undefined") { // Viewer applet is not crashed
-				if (Imaging.utils.getURLPage() === "page-document" && ViewONE.isAnnotationsUpdated()) {
-					Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
-				} else {
+				//if (Imaging.utils.getURLPage() === "page-document" && ViewONE.isAnnotationsUpdated()) {
+				//	Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
+				//} else {
 					Imaging.action.runWebscriptAction("sendtodefault", true, nodeRef, onSuccessFn);
-				}
+				//}
 			} else {
 				Imaging.action.runWebscriptAction("sendtodefault", true, nodeRef, onSuccessFn);
 			}
@@ -1486,12 +1486,12 @@ Imaging.callbackMgr = function() {
 				};
 
 			if (typeof ViewONE !== "undefined") { // Viewer applet is not crashed
-				if (Imaging.utils.getURLPage() === "page-document" && ViewONE.isAnnotationsUpdated()) {
-					$(".web-preview").css("visibility","hidden"); 
-					Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
-				} else {
+				//if (Imaging.utils.getURLPage() === "page-document" && ViewONE.isAnnotationsUpdated()) {
+				//	$(".web-preview").css("visibility","hidden"); 
+				//	Imaging.utils.yesnoBox("Save annotations", "Do you want to save annotations ?", checkYesNoSaveAnnotFn);
+				//} else {
 					Imaging.utils.runWithWorkitemPermission(nodeRef, runActionFn);
-				}
+				//}
 			} else {
 				Imaging.utils.runWithWorkitemPermission(nodeRef, runActionFn);
 			}

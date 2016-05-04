@@ -13,5 +13,6 @@
 </@>
 
 <@templateFooter>
-   
+   <script type="text/javascript" src="${page.url.context}/v1files/viewone.js"></script>
+   <script type="text/javascript" src="${page.url.context}/res/imaging/js/viewer-min.js"></script>
 </@>

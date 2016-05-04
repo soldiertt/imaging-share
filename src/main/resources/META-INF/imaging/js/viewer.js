@@ -1,0 +1,1 @@
+window.viewonehandler = function(id, text) { }

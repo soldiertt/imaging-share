@@ -16,8 +16,8 @@
 }
 #search-form form {
 	color: #2c6d9b;	
-	background-color: #f0f0ff;;
-	border:1px solid #2c6d9b;
+	background-color: #eef;;
+	border:1px solid #ccc;
 	border-radius: 8px;
 	padding-bottom:10px;
 	float:left;
@@ -30,7 +30,7 @@
 	font-size: 12px;
 	clear:both;
 	width:110px;
-	margin:10px 3px 0 0;
+	margin:13px 3px 0 0;
 	text-align:right;
 }
 
@@ -50,6 +50,7 @@
 .inputfield {
 	float:left;
 	margin-top:10px;
+	margin-left:4px;
 }
 .inputfield input[name='docname']{
 	width:17.5em;
@@ -74,7 +75,6 @@
 #search-form #submit, #search-form #clear {
 	margin-top:10px;
 	margin-left:20px;
-	font-weight:bold;
 }
 #search-form #submit:hover, #search-form #clear:hover {
 	cursor:pointer;

@@ -41,6 +41,7 @@
 </@>
 
 <@templateFooter>
+   <script type="text/javascript" src="${page.url.context}/v1files/viewone.js"></script>
    <script type="text/javascript" src="${page.url.context}/res/imaging/external/tinymce/tinymce.min.js"></script>
    <script type="text/javascript" src="${page.url.context}/res/imaging/js/dropzone-config.js"></script>
    <script type="text/javascript" src="${page.url.context}/res/imaging/js/fsoffe-min.js"></script>
