@@ -1,6 +1,6 @@
 <div id="actions-bar">
 	<a href="#" class="multi" id="act-adminrelease" data-method="POST"><img src="${absurl(url.context)}/res/imaging/img/action/release-16.png" alt="Release" /><span>Release</span></a>
-	<span id="search-table">Search: <input type="search" name="searchterm" class="form-control" /></span>
+	<div class="boxright"><span>Search: <input type="search" name="searchterm" class="form-control" /></span><span id="boxinfo"></span></div>
 </div>
 <#assign tblClass="notempty">
 <#if result.documents?size == 0>

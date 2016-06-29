@@ -2,7 +2,7 @@
 	<a href="#" class="multi" id="act-release" data-method="POST"><img src="${absurl(url.context)}/res/imaging/img/action/release-16.png" alt="Release" /><span>Release</span></a> 
 	<a href="#" class="multi" id="act-indexform"><img src="${absurl(url.context)}/res/imaging/img/action/editmetadata-16.png" alt="Form" /><span>Form</span></a>
 	<a href="#" class="multi" id="act-sendtodefault" data-method="GET"><img src="${absurl(url.context)}/res/imaging/img/action/sendtodefault-16.png" alt="Send to default" /><span>Send to default</span></a>
-	<span id="search-table">Search: <input type="search" name="searchterm" class="form-control" /></span>
+	<div class="boxright"><span>Search: <input type="search" name="searchterm" class="form-control" /></span><span id="boxinfo"></span></div>
 </div>
 <#assign tblClass="notempty">
 <#if workitems.documents?size == 0>

@@ -1,6 +1,6 @@
 <div id="actions-bar">
 	<a href="#" class="multi" id="act-toworkitems" data-method="POST"><img src="${absurl(url.context)}/res/imaging/img/action/toworkitems-16.png" alt="To workitem" /><span>To workitem</span></a>
-	<span id="search-table">Search: <input type="search" name="searchterm" class="form-control" /></span>
+	<div class="boxright"><span>Search: <input type="search" name="searchterm" class="form-control" /></span><span id="boxinfo"></span></div>
 </div>
 <#assign tblClass="notempty">
 <#if result.outboxes?size == 0>

@@ -36,7 +36,7 @@
                  <img src="${source}" alt="Edit online"/>
 				</a>
 			</#if>
-            <#if (result.isinmyworkitem == "yes" && document.creator == user.name) || user.isAdmin >
+            <#if (result.isinmyworkitem == "yes" && document.creator == user.id) || user.isAdmin >
 				<a href="#" id="del-${document.docid}"><img src="${absurl(url.context)}/res/imaging/img/delimport-16.png" alt="Delete" /></a>
 			</#if>
 			<#if (result.isinmyworkitem == "yes") || user.isAdmin >

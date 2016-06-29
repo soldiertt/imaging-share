@@ -1,9 +1,16 @@
-.dashlet-left {
-	float:left;
-	padding: 10px;
+.dash-table {
+	display: table;
+	width: 100%;
 }
-.dashlet-right {
-	float:right;
+.column-left {
+	display: table-cell;
+	width: 60%;
+}
+.column-right {
+	display: table-cell;
+	width: 40%;
+}
+.dashlet-wrapper {
 	padding: 10px;
 }
 .dashlet {

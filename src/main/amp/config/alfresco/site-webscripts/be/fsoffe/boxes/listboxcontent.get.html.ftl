@@ -2,7 +2,7 @@
 	<a href="#" id="act-assignedtome"><#if assignedtome="yes"><img src="${absurl(url.context)}/res/imaging/img/checked.png" alt="Assigned to me" /></#if><#if assignedtome="no"><img src="${absurl(url.context)}/res/imaging/img/unchecked.png" alt="Assigned to me" /></#if><span>Assigned to me</span></a>
 	<a href="#" id="act-showworkitems"><#if showworkitems="yes"><img src="${absurl(url.context)}/res/imaging/img/checked.png" alt="Workitems" /></#if><#if showworkitems="no"><img src="${absurl(url.context)}/res/imaging/img/unchecked.png" alt="Workitems" /></#if><span>Show workitems</span></a>
 	<a href="#" class="multi" id="act-toworkitems" data-method="POST"><img src="${absurl(url.context)}/res/imaging/img/action/toworkitems-16.png" alt="To workitem" /><span>To workitem</span></a>
-	<span id="search-table">Search: <input type="search" name="searchterm" class="form-control" /></span>
+	<div class="boxright"><span>Search: <input type="search" name="searchterm" class="form-control" /></span><span id="boxinfo"></span></div>
 </div>
 <#assign tblClass="notempty">
 <#if result.documents?size == 0>

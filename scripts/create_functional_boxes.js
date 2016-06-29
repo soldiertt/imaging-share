@@ -1,3 +1,16 @@
+// FIRST ADD REQUIRED GROUP
+var leaderGroupName = "IMG-SERVICE-LEADS";
+var leaderGroup = people.getGroup(leaderGroupName);
+if (!leaderGroup) {
+	people.createGroup(leaderGroupName);
+}
+var lettreGroupName = "IMG-BRIEF-LETTRE-CLIENT";
+var lettreGroup = people.getGroup(lettreGroupName);
+if (!lettreGroup) {
+	people.createGroup(lettreGroupName);
+}
+
+// THEN FOLDERS
 var dropzoneFolder = companyhome.childByNamePath(imaging.getConstant("dropzoneFolderName"));
 if (dropzoneFolder == null && companyhome.hasPermission("CreateChildren")) {
   dropzoneFolder = companyhome.createNode(imaging.getConstant("dropzoneFolderName"),"fds:folder");

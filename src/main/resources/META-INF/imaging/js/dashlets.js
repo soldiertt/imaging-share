@@ -7,7 +7,17 @@ $(function() {
 	    "aaSorting": [[ 5, "desc" ]]
 	});
 	
-	$("#workitemstable, #taskstable, #myactivitiestable_normal, #myactivitiestable_lettertype").dataTable( {
+	$("#workitemstable").dataTable( {
+	    "bPaginate": false,
+	    "bInfo" : false,
+	    "bFilter" : false,
+	    "aaSorting": [[ 1, "asc" ]],
+	    "aoColumnDefs": [
+	                     { "bSortable": false, aTargets: [ 0 ] }
+	                     ]
+	});
+	
+	$("#taskstable, #myactivitiestable_normal, #myactivitiestable_lettertype").dataTable( {
 	    "bPaginate": false,
 	    "bInfo" : false,
 	    "bFilter" : false
@@ -15,7 +25,6 @@ $(function() {
 	
 	$("#workitemstable tbody tr").dblclick(function(e){
 		Imaging.utils.goTo("page-boxes?nodeRef=" + $(this).attr("id"));
-		
 	});
 	
 	$("#mypersonaltable tbody tr").dblclick(function(e){

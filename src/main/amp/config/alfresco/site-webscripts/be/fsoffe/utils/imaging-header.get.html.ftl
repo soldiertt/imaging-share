@@ -29,7 +29,7 @@
       </ul>	
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${user.fullName} (<span id="userid">${user.name}</span>) <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${user.fullName} (<span id="userid">${user.id}</span>) <span class="caret"></span></a>
           <ul class="dropdown-menu">
 			<#assign prefClass = (pageId == "page-preferences")?string("active","")>
             <li class="${prefClass}"><a href="${url.context}/page/site/${activeSite}/page-preferences">Preferences</a></li>

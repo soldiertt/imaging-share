@@ -45,18 +45,18 @@
 				<param name="annotationSecurityModel" value="2"> 
 				
 				<param name="annotationStamp1" value="&lt;userid&gt;&lt;N&gt;&lt;date&gt;">
-				<param name="annotationStamp2" value="image:${url.context}/res/imaging/img/annot/approved.png&lt;255,255,255&gt;">
-				<param name="annotationStamp3" value="image:${url.context}/res/imaging/img/annot/rejected.png&lt;129,129,129&gt;">
-				<param name="annotationStamp4" value="image:${url.context}/res/imaging/img/annot/overdue.png&lt;255,255,255&gt;">
-				<param name="annotationStamp5" value="image:${url.context}/res/imaging/img/annot/check.png&lt;255,255,255&gt;">
-				<param name="annotationStamp6" value="image:${url.context}/res/imaging/img/annot/cross.png&lt;255,255,255&gt;">
-				<param name="annotationStamp7" value="image:${url.context}/res/imaging/img/annot/question.png&lt;255,255,255&gt;">
-				<param name="annotationStamp8" value="image:${url.context}/res/imaging/img/annot/exclamation.gif&lt;206,237,220&gt;">
-				<param name="annotationStamp9" value="image:${url.context}/res/imaging/img/annot/star.png&lt;255,255,255&gt;">
-				<param name="annotationStamp10" value="image:${url.context}/res/imaging/img/annot/phone.png&lt;0,0,0&gt;">
-				<param name="annotationStamp11" value="image:${url.context}/res/imaging/img/annot/downarrow.png&lt;255,255,255&gt;">
-				<param name="annotationStamp12" value="image:${url.context}/res/imaging/img/annot/uparrow.png&lt;255,255,255&gt;">
-				<param name="annotationStamp13" value="image:${url.context}/res/imaging/img/annot/circle.png&lt;255,255,255&gt;">
+				<param name="annotationStamp2" value="image:${url.context}/viewone/approved.png&lt;255,255,255&gt;">
+				<param name="annotationStamp3" value="image:${url.context}/viewone/rejected.png&lt;129,129,129&gt;">
+				<param name="annotationStamp4" value="image:${url.context}/viewone/overdue.png&lt;255,255,255&gt;">
+				<param name="annotationStamp5" value="image:${url.context}/viewone/check.png&lt;255,255,255&gt;">
+				<param name="annotationStamp6" value="image:${url.context}/viewone/cross.png&lt;255,255,255&gt;">
+				<param name="annotationStamp7" value="image:${url.context}/viewone/question.png&lt;255,255,255&gt;">
+				<param name="annotationStamp8" value="image:${url.context}/viewone/exclamation.gif&lt;206,237,220&gt;">
+				<param name="annotationStamp9" value="image:${url.context}/viewone/star.png&lt;255,255,255&gt;">
+				<param name="annotationStamp10" value="image:${url.context}/viewone/phone.png&lt;0,0,0&gt;">
+				<param name="annotationStamp11" value="image:${url.context}/viewone/downarrow.png&lt;255,255,255&gt;">
+				<param name="annotationStamp12" value="image:${url.context}/viewone/uparrow.png&lt;255,255,255&gt;">
+				<param name="annotationStamp13" value="image:${url.context}/viewone/circle.png&lt;255,255,255&gt;">
 				
 				<param name="annotationStampProperties1" value="&lt;menu=Initials&gt;&lt;color=white&gt;&lt;FontHeight=16&gt;&lt;FillColor=red&gt;"> 
 				<param name="annotationStampProperties2" value="&lt;menu=Approved&gt;&lt;scale=2.0&gt;">

@@ -189,7 +189,7 @@ $(function() {
 		//** PBI WINDOW **
 		//****************
 		pbsessionid = Imaging.utils.getURLParameter("pbsessionid");
-		$("div#alf-hd").hide();
+		$(".navbar").hide();
 		//Change window title
 		document.title = "PBI";
 	} else {

@@ -10,20 +10,24 @@
 		<@region id="imaging-header" scope="template" />
 	</div>
 	
-	<div class="dashlet-left">
-		<@region id="mytasks-dashlet" scope="template" />
-	</div>
-	 
-	<div class="dashlet-left">   
-		<@region id="workitem-dashlet" scope="template" />
-	</div>
-	
-	<div class="dashlet-left">
-		<@region id="mypersonal-dashlet" scope="template" />
-	</div>
-	    
-	<div class="dashlet-left dashlet-wrapper">
-		<@region id="myactivities-dashlet" scope="template" />
+	<div class="dash-table">
+		<div class="column-left">
+			<div class="dashlet-wrapper">
+				<@region id="mytasks-dashlet" scope="template" />
+			</div>
+			<div class="dashlet-wrapper">
+				<@region id="mypersonal-dashlet" scope="template" />
+			</div>
+		</div>
+		
+		<div class="column-right">
+			<div class="dashlet-wrapper">   
+				<@region id="workitem-dashlet" scope="template" />
+			</div>
+			<div class="dashlet-wrapper">
+				<@region id="myactivities-dashlet" scope="template" />
+			</div>
+		</div>
 	</div>
 </div>
 </@>
